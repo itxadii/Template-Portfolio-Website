@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       to_email: 'ezyadix@gmail.com'
     };
 
-    emailjs.send('default_service', 'template_xyz', formData, 'YOUR_PUBLIC_KEY')
+    emailjs.send('service_19gb3kp', 'template_ib9vwr7', formData)
       .then(() => {
         alert('Message sent successfully!');
         form.reset();
