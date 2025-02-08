@@ -243,7 +243,9 @@ section {
 h2 {
   text-align: center;
   margin-bottom: 3rem;
-  color: #64ffda;
+  color: #a020f0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .projects-grid {
@@ -260,22 +262,22 @@ h2 {
   border-radius: 10px;
   transition: all 0.3s;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(160, 32, 240, 0.2);
   backdrop-filter: blur(20px);
 }
 
 .project-card:hover {
   transform: translateY(-10px) scale(1.02);
-  border-color: #64ffda;
+  border-color: #a020f0;
   box-shadow: 
-    0 0 20px rgba(100, 255, 218, 0.2),
-    0 0 40px rgba(100, 255, 218, 0.1),
-    inset 0 0 20px rgba(100, 255, 218, 0.1);
+    0 0 20px rgba(160, 32, 240, 0.2),
+    0 0 40px rgba(160, 32, 240, 0.1),
+    inset 0 0 20px rgba(160, 32, 240, 0.1);
 }
 
 .project-icon {
   font-size: 2rem;
-  color: #64ffda;
+  color: #a020f0;
   margin-bottom: 1rem;
   animation: pulse 2s infinite;
 }
