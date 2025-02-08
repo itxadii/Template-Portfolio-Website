@@ -390,6 +390,18 @@ button:active {
   transform: translateY(-1px);
 }
 
+footer {
+  background: rgba(17, 34, 64, 0.15);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.8;
+}
+
 @media (max-width: 768px) {
   nav {
     padding: 1rem;
