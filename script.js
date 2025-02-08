@@ -32,9 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  // Remove orbit click handler since it's not needed
+  // Add orbit click handler for speed toggle
   const orbit = document.querySelector('.orbit');
-  orbit.style.animation = 'rotate 10s linear infinite';
+  let isFast = false;
+  
+  orbit.addEventListener('click', () => {
+    isFast = !isFast;
+    orbit.style.animation = `rotate ${isFast ? '3s' : '10s'} linear infinite`;
+  });
 
   // Animate elements on scroll
   const observerOptions = {
