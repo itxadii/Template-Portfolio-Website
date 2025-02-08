@@ -95,7 +95,7 @@ body::before {
 }
 
 .hire-btn {
-  background: linear-gradient(135deg, #b197fc, #9775fa);
+  background: linear-gradient(135deg, #a020f0, #8a2be2);
   color: #fff;
   border: none;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -212,14 +212,15 @@ nav ul li a:hover {
 
 .hero-content h1 {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 4.5rem;
-  font-weight: 700;
+  font-size: 5rem;
+  font-weight: 800;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #fff, #b197fc);
+  background: linear-gradient(135deg, #fff, #a020f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 30px rgba(177, 151, 252, 0.5);
-  letter-spacing: 2px;
+  text-shadow: 0 0 30px rgba(160, 32, 240, 0.5);
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .animate-text {
