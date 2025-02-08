@@ -14,20 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Message sent successfully!');
-    form.reset();
+    const formData = {
+      name: form.elements[0].value,
+      email: form.elements[1].value,
+      message: form.elements[2].value,
+      to_email: 'ezyadix@gmail.com'
+    };
+
+    emailjs.send('default_service', 'template_xyz', formData, 'YOUR_PUBLIC_KEY')
+      .then(() => {
+        alert('Message sent successfully!');
+        form.reset();
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert('Failed to send message. Please try again.');
+      });
   });
 
-  // Orbit speed control
+  // Remove orbit click handler since it's not needed
   const orbit = document.querySelector('.orbit');
-  let isSpeedUp = false;
-
-  orbit.addEventListener('click', () => {
-    isSpeedUp = !isSpeedUp;
-    document.body.style.animationDuration = isSpeedUp ? '180s' : '360s';
-    document.body.nextElementSibling.style.animationDuration = isSpeedUp ? '240s' : '480s';
-    orbit.style.animationDuration = isSpeedUp ? '5s' : '10s';
-  });
+  orbit.style.animation = 'rotate 10s linear infinite';
 
   // Animate elements on scroll
   const observerOptions = {
