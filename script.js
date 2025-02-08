@@ -18,6 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
     form.reset();
   });
 
+  // Orbit speed control
+  const orbit = document.querySelector('.orbit');
+  let isSpeedUp = false;
+
+  orbit.addEventListener('click', () => {
+    isSpeedUp = !isSpeedUp;
+    document.body.style.animationDuration = isSpeedUp ? '180s' : '360s';
+    document.body.nextElementSibling.style.animationDuration = isSpeedUp ? '240s' : '480s';
+    orbit.style.animationDuration = isSpeedUp ? '5s' : '10s';
+  });
+
   // Animate elements on scroll
   const observerOptions = {
     threshold: 0.1

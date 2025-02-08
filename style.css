@@ -16,15 +16,15 @@ body {
 }
 
 @keyframes stars1 {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  50% { transform: translate(-50px, -25px) rotate(180deg); }
-  100% { transform: translate(0, 0) rotate(360deg); }
+  0% { transform: translate(0, 0) rotate(0deg) scale(1.2); }
+  50% { transform: translate(-50px, -25px) rotate(180deg) scale(1.3); }
+  100% { transform: translate(0, 0) rotate(360deg) scale(1.2); }
 }
 
 @keyframes stars2 {
-  0% { transform: translate(0, 0) rotate(180deg); }
-  50% { transform: translate(25px, 50px) rotate(0deg); }
-  100% { transform: translate(0, 0) rotate(-180deg); }
+  0% { transform: translate(0, 0) rotate(180deg) scale(1.2); }
+  50% { transform: translate(25px, 50px) rotate(0deg) scale(1.3); }
+  100% { transform: translate(0, 0) rotate(-180deg) scale(1.2); }
 }
 
 body::before {
@@ -50,7 +50,8 @@ body::before {
     190px 190px;
   opacity: 0.4;
   z-index: -1;
-  animation: stars1 180s ease-in-out infinite alternate;
+  animation: stars1 360s ease-in-out infinite alternate;
+  transition: animation-duration 0.5s ease;
 }
 
 body::after {
@@ -63,7 +64,8 @@ body::after {
   background: inherit;
   opacity: 0.3;
   z-index: -1;
-  animation: stars2 240s ease-in-out infinite alternate;
+  animation: stars2 480s ease-in-out infinite alternate;
+  transition: animation-duration 0.5s ease;
 }
 
 @keyframes twinkle {
